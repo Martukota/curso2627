@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="es-ES">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Práctica 06 - Enlaces</title>
+        <style>
+            section{margin-top:120px;}
+        </style>
+    </head>
+
+    <body>
+        <section id="inicio">
+            <h1>Guía rápida de recursos web</h1>
+            <a href="#html">Enlace a HTML</a> <a href="#css">Enlace a CSS</a> <a href="#navegadores">Enlace a navegadores</a>
+        </section>
+        <!-- TODO 1: Crea un enlace absoluto a https://www.google.es. -->
+         <a href="https://www.google.es">Enlace a Google</a> <br>
+        <!-- TODO 2: Haz que otro enlace a Google se abra en una pestaña nueva. -->
+         <a href="https://www.google.es" target="_blank">Enlace a Google en pestaña nueva</a> <br>
+        <!-- TODO 3: Añade title="Buscador Google" a un tercer enlace. -->
+         <a href="https://www.google.es" target="_blank" title="Busador de Google">Con título</a> <br>
+        <!-- TODO 4: Crea un enlace relativo hacia "05_listas.html". -->
+         <a href="05_listas.html">Enlace a HTML</a> <br>
+
+        <!-- TODO 5: Crea arriba un pequeño menú que enlace mediante #id con las tres secciones inferiores. -->
+
+        
+        <section id="html">
+            
+            <h2>HTML</h2>
+            <p>HTML estructura el contenido de una página.</p>
+        
+        </section>
+
+        <section id="css">
+            
+            <h2>CSS</h2>
+            <p>CSS define la presentación.</p>
+        
+        </section>
+
+        <section id="navegadores">
+            
+            <h2>Navegadores</h2>
+            <p>Interpretan y muestran las páginas web.</p>
+        <a href="#inicio">Volver arriba</a>
+
+        </section>
+        
+        
+        <!-- EXPERIMENTO: elimina target="_blank", prueba el enlace y observa dónde se abre. Después restáuralo. -->
+        <!-- RETO: añade al final de cada sección un enlace que vuelva al inicio de la página. -->
+    </body>
+
+</html>

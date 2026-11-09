@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+
+<html lang="es-ES">
+    
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Práctica 11 - Envío de formularios</title>
+    </head>
+    
+    <body>
+        <h1>¿Qué envía un formulario?</h1>
+        <!-- Para probar el envío, crea tu propia URL temporal de pruebas y colócala en action. No uses datos personales reales. -->
+        
+        <form action="https://webhook.site/1df0fc57-906c-4d3e-aea4-2bbcba2512ff" method="get" enctype="multipart/form-data">
+            <!-- TODO 1: Crea nombre y email. Ambos deben tener id, name y required. -->
+            <fieldset style="background-color: antiquewhite;">
+                    <legend>Datos del usuario</legend>
+
+                    <label for="usuario_nombre">Nombre de usuario</label> <br>
+                    <input type="text" name="nombre_Usuario" id="usuario_nombre" required> <br>
+
+                    <label for="usuario_correo">Email:</label> <br>
+                    <input type="email" name="email_Usuario" id="usuario_correo" required> <br>
+
+            </fieldset>
+
+            <!-- TODO 2: Crea tres checkbox (varias opciones) con el mismo name "idiomas[]" y values diferentes. -->
+            <fieldset style="background-color: burlywood;">
+                    <legend>Selección múltiple- Idiomas</legend>
+
+                    <label for="idioma-ingles">Inglés</label> <br>
+                    <input type="checkbox" id="idioma-ingles" name="idiomas[]" value="ingles"> <br>
+
+                    <label for="idioma-frances">Francés</label> <br>
+                    <input type="checkbox" id="idioma-frances" name="idiomas[]" value="frances"> <br>
+
+                    <label for="idioma-italiano">Italiano</label> <br>
+                    <input type="checkbox" id="idioma-italiano" name="idiomas[]" value="italiano"> <br>
+            </fieldset>
+            
+            
+            <!-- TODO 3: Crea tres radio con name="modalidad" y values diferentes. -->
+            <fieldset style="background-color: cadetblue;">
+                    <legend>Selección única - Horario</legend>
+
+                    <label for="horario_lunes">Lunes y miércoles</label> <br>
+                    <input type="radio" id="horario_lunes" name="Dias" value="lunes"> <br>
+
+                    <label for="horario_martes">Martes y jueves</label> <br>
+                    <input type="radio" id="horario_martes" name="Dias" value="martes"> <br>
+
+                    <label for="horario_viernes">Viernes y sábado</label><br>
+                    <input type="radio" id="horario_viernes" name="Dias" value="viernes"> <br>
+
+            </fieldset>
+
+
+
+            <!-- TODO 4: Añade un archivo. Explica en un comentario por qué usamos multipart/form-data. -->
+
+            <fieldset style="background-color: rgb(221, 198, 243);">
+                    <legend>Archivo</legend>
+
+                    <!--Multipart/formdata permite en un formulario enviar archivos y datos-->
+                    <label for="archivo"></label>
+                    <input type="file" id="archivo" name="File">
+            </fieldset>
+            <!-- TODO 5: Añade submit y reset. -->
+            
+            <fieldset style="background-color: rgb(220, 241, 199);">
+                <legend>Enviar datos</legend>
+                <button type="submit" id="boton_enviar" name="accion" value="enviado">Enviar</button>
+                <button type="reset" id="boton_limpiar" name="accion" value="vaciado">Limpiar</button>
+
+            </fieldset>
+
+            <!-- EXPERIMENTO: envía datos a un endpoint de pruebas y localiza los nombres de variables definidos mediante name. Cambia method a get SOLO con datos ficticios y observa la URL; después vuelve a post. -->
+            <!-- RETO: añade un select y comprueba qué value se envía para cada option. -->
+        </form>
+    </body>
+
+</html>
